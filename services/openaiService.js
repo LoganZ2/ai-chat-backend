@@ -26,7 +26,7 @@ export const createOpenAIConversation = async (model, message) => {
         const namer = [...messages];
         namer.push({
             role: "user",
-            content: "give our conversation a name, less than 8 words, no quotation marks",
+            content: "give our conversation a name, less than 8 words, output with no quotation marks",
         });
     
         const namerResponse = await openai.chat.completions.create({
